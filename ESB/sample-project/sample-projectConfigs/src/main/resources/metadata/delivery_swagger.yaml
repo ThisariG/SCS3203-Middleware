@@ -1,0 +1,48 @@
+openapi: 3.0.1
+info:
+  title: delivery
+  description: API Definition of delivery
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/delivery
+paths:
+  /{address}:
+    get:
+      parameters:
+      - name: address
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+    options:
+      parameters:
+      - name: address
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response

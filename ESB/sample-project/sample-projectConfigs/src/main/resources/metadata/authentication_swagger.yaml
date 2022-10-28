@@ -1,0 +1,43 @@
+openapi: 3.0.1
+info:
+  title: authentication
+  description: API Definition of authentication
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/authentication
+paths:
+  /login:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /signup:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /:
+    get:
+      responses:
+        default:
+          description: Default response

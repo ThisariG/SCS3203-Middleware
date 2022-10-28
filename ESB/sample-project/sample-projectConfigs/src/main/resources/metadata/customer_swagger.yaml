@@ -1,0 +1,39 @@
+openapi: 3.0.1
+info:
+  title: customer
+  description: API Definition of customer
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/customer
+paths:
+  /buy:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /callback/{data}/{token}:
+    get:
+      parameters:
+      - name: data
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: token
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response

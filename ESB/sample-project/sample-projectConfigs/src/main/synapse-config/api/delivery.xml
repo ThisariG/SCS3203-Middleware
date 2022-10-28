@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/delivery" name="delivery" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="OPTIONS GET" uri-template="/{address}">
+        <inSequence>
+            <send>
+                <endpoint key="getDeliveryPrice"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/">
+        <inSequence>
+            <send>
+                <endpoint key="insertDelivery"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

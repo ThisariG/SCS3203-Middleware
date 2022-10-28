@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/notification" name="notification" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/mail">
+        <inSequence>
+            <send>
+                <endpoint key="notificationMail"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/sms">
+        <inSequence>
+            <send>
+                <endpoint key="notificationSms"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

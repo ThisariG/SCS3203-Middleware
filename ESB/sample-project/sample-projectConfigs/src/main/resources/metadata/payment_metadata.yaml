@@ -1,0 +1,11 @@
+---
+key: "payment-1.0.0"
+name : "payment"
+displayName : "payment"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/payment"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

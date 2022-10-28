@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/products" name="products" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/{name}">
+        <inSequence>
+            <send>
+                <endpoint key="getProducts"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET">
+        <inSequence>
+            <send>
+                <endpoint key="getAllProducts"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="DELETE" uri-template="/{id}">
+        <inSequence>
+            <send>
+                <endpoint key="deleteProduct"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/{id}">
+        <inSequence>
+            <send>
+                <endpoint key="updateProduct"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/">
+        <inSequence>
+            <send>
+                <endpoint key="insertProduct"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/buy">
+        <inSequence>
+            <send>
+                <endpoint key="productBuy"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/payment" name="payment" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/card">
+        <inSequence>
+            <send>
+                <endpoint key="paymentCard"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/mobile">
+        <inSequence>
+            <send>
+                <endpoint key="paymentMobile"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/getMobilePin/{mobile}">
+        <inSequence>
+            <send>
+                <endpoint key="getMobilePin"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

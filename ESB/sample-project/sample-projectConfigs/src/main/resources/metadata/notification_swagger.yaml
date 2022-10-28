@@ -1,0 +1,38 @@
+openapi: 3.0.1
+info:
+  title: notification
+  description: API Definition of notification
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/notification
+paths:
+  /mail:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /sms:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response

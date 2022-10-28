@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/customer" name="customer" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/buy">
+        <inSequence>
+            <send>
+                <endpoint key="customerBuy"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/callback/{data}/{token}">
+        <inSequence>
+            <send>
+                <endpoint key="customerCallback"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>
