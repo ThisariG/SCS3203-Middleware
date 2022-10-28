@@ -1,5 +1,6 @@
 Github URL: https://github.com/ThisariG/SCS3203-Middleware
-YouTbe URL: https://youtu.be/aWn1BgtLMDs
+
+YouTube URL: https://youtu.be/aWn1BgtLMDs
 
 # configuration
 refer `env.sample` to create `.env` for the configurations
