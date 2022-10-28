@@ -1,4 +1,5 @@
-# Middleware SCS - 3203
+Github URL: https://github.com/ThisariG/SCS3203-Middleware
+YouTbe URL: https://youtu.be/aWn1BgtLMDs
 
 # configuration
 refer `env.sample` to create `.env` for the configurations
@@ -9,9 +10,11 @@ databases will be auto generated when services started
 install ws02 Integration Studio	8.1.0.202203281342
 import the esb directory (refer https://ei.docs.wso2.com/en/latest/micro-integrator/develop/importing-projects/)
 Run the project
+
 # run back-end
 Run `npm install`
 Run `npm run start:dev` to start the services
+
 # run front-end
 Run `npm install` inside the front-end directory
 Run `npm start` inside the front-end directory
