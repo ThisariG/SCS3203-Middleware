@@ -1,7 +1,3 @@
-Github URL: https://github.com/ThisariG/SCS3203-Middleware
-
-YouTube URL: https://youtu.be/aWn1BgtLMDs
-
 # configuration
 refer `env.sample` to create `.env` for the configurations
 start the database server and add the configurations to `.env` file
