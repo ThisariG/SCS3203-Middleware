@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "authentication": "apps/authentication",
+    "customer": "apps/customer",
+    "db": "libs/db",
+    "delivery": "apps/delivery",
+    "inventory": "apps/inventory",
+    "notification": "apps/notification",
+    "payment": "apps/payment",
+    "utilities": "libs/utilities"
+  }
+}
